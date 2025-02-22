@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colores para la aplicación -->
+    <color name="primary_text">#212121</color>  <!-- Color de texto principal -->
+    <color name="button_background">#6200EE</color> <!-- Fondo de los botones -->
+    <color name="white">#FFFFFF</color>  <!-- Color blanco -->
+    <color name="background_color">#F5F5F5</color>  <!-- Color de fondo de la aplicación -->
+    <color name="accent_color">#03DAC5</color>  <!-- Color de acento (puedes cambiarlo) -->
+
+</resources>
