@@ -5,6 +5,8 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +29,11 @@ public class TrackingActivity extends AppCompatActivity {
         distanceText = findViewById(R.id.distanceText);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        // Configurar el botón de retroceso
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> onBackPressed());  // Llama al método onBackPressed cuando se presiona
+
+        // Verificar permisos y empezar el seguimiento de la ubicación
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             startTracking();
         } else {
